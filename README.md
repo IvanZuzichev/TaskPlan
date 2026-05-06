@@ -86,7 +86,7 @@ Angular CLI (устанавливается автоматически)
 
 ## 1. Клонируйте репозиторий
 ``` bash
-git clone https://github.com/your-username/taskplan.git
+git clone https://github.com/IvanZuzichev/TaskPlan.git
 cd taskplan
 ```
 ## 2. Установите зависимости
