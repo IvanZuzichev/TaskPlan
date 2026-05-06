@@ -1,0 +1,14 @@
+<div class="app-container">
+  <header class="app-header">
+    <h1>{{ title }}</h1>
+    <p class="subtitle">Управляйте своими задачами эффективно</p>
+  </header>
+  
+  <main>
+    <app-add-task (taskAdded)="handleTaskAdded($event)"></app-add-task>
+    <app-task-list 
+      [tasks]="taskService.tasks()" 
+      (deleteTask)="handleDeleteTask($event)">
+    </app-task-list>
+  </main>
+</div>

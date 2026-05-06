@@ -1,0 +1,20 @@
+<div class="task-list">
+  <div class="task-stats">
+    <h3>Все заметки ({{ tasks().length }})</h3>
+  </div>
+  
+  @if (tasks().length === 0) {
+    <div class="empty-state">
+      <p>Нет заметок. Добавьте первую!</p>
+    </div>
+  } @else {
+    <div class="tasks-grid">
+      @for (task of tasks(); track task.id) {
+        <app-task-card 
+          [task]="task" 
+          (delete)="onDelete($event)">
+        </app-task-card>
+      }
+    </div>
+  }
+</div>

@@ -1,0 +1,28 @@
+<div class="task-card" 
+     [style.border-left-color]="getTimeBorderColor()"
+     [style.border-bottom-color]="getTaskBorderColor()">
+  <div class="task-header">
+    <h3 class="task-title">{{ task.title }}</h3>
+    <button class="delete-btn" (click)="onDelete()">×</button>
+  </div>
+  
+  <div class="task-details">
+    <div class="detail">
+      <span class="detail-label">Время:</span>
+      <span class="badge" [style.background-color]="getTimeBadgeColor()">
+        {{ getTimeLabel() }}
+      </span>
+    </div>
+    
+    <div class="detail">
+      <span class="detail-label">Приоритет:</span>
+      <span class="badge" [style.background-color]="getTaskBadgeColor()">
+        {{ getTaskLabel() }}
+      </span>
+    </div>
+  </div>
+  
+  <div class="task-footer">
+    <small>Создано: {{ task.createdAt | date:'dd.MM.yyyy' }}</small>
+  </div>
+</div>
